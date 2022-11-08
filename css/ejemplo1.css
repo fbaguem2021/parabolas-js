@@ -1,0 +1,49 @@
+body {
+    background: #292b37;
+    color: #fff;
+  }
+  
+  .float__buy-bar {
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+    right: 30%;
+    bottom: 0;
+    position: fixed;
+    background: #52bc57;
+  }
+  .float__buy-bar span {
+    font-size: 24px;
+    line-height: 1;
+  }
+  
+  .btn {
+    background: #52bc57;
+    border-bottom: 2px #2f7932 solid;
+    width: 120px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    border-radius: 3px;
+    margin: 100px 0 0 0;
+    cursor: pointer;
+  }
+  .btn::selection {
+    background: none;
+  }
+  
+  #circle,
+  p {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #d28e5d;
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+  
+  p {
+    background: #dc3b3b;
+    z-index: 1;
+  }
