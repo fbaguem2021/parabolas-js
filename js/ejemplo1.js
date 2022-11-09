@@ -18,7 +18,7 @@ var parabola = (function () {
     var a, b, c, x1, y1, x2, y2, y, sum, t, x2l, x2r, x2b, x2t;
     x1 = self.offsetLeft + self.clientWidth / 2;
     y1 = self.offsetTop;
-    x2 = bar.offsetLeft + self.clientWidth / 2;
+    x2 = (bar.offsetLeft + self.clientWidth / 2);
     //x2 = 500;
     
     x2l= bar.offsetLeft;
@@ -30,7 +30,7 @@ var parabola = (function () {
     y2 = bar.offsetTop;
     //console.log(`x1: ${x1}`);
     //console.log(`y1: ${y1}`);
-    //console.log(`x2: ${x2}`);
+    //console.log(`x2: ${x2}`); 
     //console.log(`y2: ${y2}`);
 
     a = 0.0009;

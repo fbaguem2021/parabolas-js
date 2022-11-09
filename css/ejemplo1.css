@@ -1,9 +1,8 @@
 body {
     background: #292b37;
     color: #fff;
-  }
-  
-  .float__buy-bar {
+}
+.float__buy-bar {
     width: 100px;
     line-height: 40px;
     text-align: center;
@@ -11,13 +10,13 @@ body {
     bottom: 0;
     position: fixed;
     background: #52bc57;
-  }
-  .float__buy-bar span {
+}
+.float__buy-bar span {
     font-size: 24px;
     line-height: 1;
-  }
+}
   
-  .btn {
+.btn {
     background: #52bc57;
     border-bottom: 2px #2f7932 solid;
     width: 120px;
@@ -27,13 +26,13 @@ body {
     border-radius: 3px;
     margin: 500px 0px 0px 100px;
     cursor: pointer;
-  }
-  .btn::selection {
+}
+.btn::selection {
     background: none;
-  }
+}
   
-  #circle,
-  p {
+#circle,
+p {
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -41,9 +40,9 @@ body {
     position: absolute;
     display: block;
     z-index: 2;
-  }
+}
   
-  p {
+p {
     background: #dc3b3b;
     z-index: 1;
-  }
+}
