@@ -25,7 +25,7 @@ body {
     display: block;
     text-align: center;
     border-radius: 3px;
-    margin: 100px 0 0 0;
+    margin: 500px 0px 0px 100px;
     cursor: pointer;
   }
   .btn::selection {
@@ -37,7 +37,7 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #d28e5d;
+    background: #2c96dd;
     position: absolute;
     display: block;
     z-index: 2;
