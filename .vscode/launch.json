@@ -8,7 +8,7 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "name": "Launch index.html",
+            "name": "Launch",
             "file": "${workspaceFolder}/index.html"
         }
     ]
