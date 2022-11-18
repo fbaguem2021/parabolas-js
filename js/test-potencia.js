@@ -5,6 +5,10 @@ const fill = $('.progress-bar-fill');
 const line = $('.line');
 // BOOLEANO PARA PARAR LA ANIMACION
 let stopAnimation = false;
+// ENTERO CON EL VALOR DE LA POSICIÓN
+let position = 0;
+// STRING CON EL VALOR DE LA DIRECCION EN QUE SE MOVERA LA BARRA
+let action = "increase";
 // EVENTO DE CLIC PARA EL BOTÓN
 btn.onclick = function() {
     fill.stop();
@@ -25,7 +29,6 @@ window.addEventListener("keydown", (key) => {
 // ejecuta la función de la animación
 //startAnimation();
 
-
 function loop() {
     $('#clouds').css({right:0});
     $('#clouds').animate({
@@ -36,36 +39,66 @@ function loop() {
         complete: loop
     });
 }
-loop();
-var position = 0;
+//loop();
 function myloop() {
     //if(action=="increase"){position++;}else if(action=="decrease"){position--;}
     //"increase"==action?position++:"decrease"==action&&position--;
     //action=="increase"?position++:action=="decrease"&&position--;
     // stop?console.log("Stopped"):
     //     "increase"==action?position++:"decrease"==action&&position--;
-    if (position < 100) {
-        stop?console.log("Stopped"):
-            ("increase"==action?position+=50:"decrease"==action&&
-            position--,moveLine(myloop));
+    stop?console.log("Stopped"):
+        ("increase"==action?position+=50:"decrease"==action&&
+        position--,moveLine(myloop));
+}
+//position=25;
+//promisedLoop();
+//promisedLoop()
+async function promisedLoop() {
+    while (!stopAnimation) { 
+
+    console.log("Animation Start")
+    let promise = await moveLine();
+    // if (position == 25) {stopAnimation = true; console.log("Animation End"); }
+    15==position&&(stopAnimation=!0,console.log("AnimationEnd"));
+        //setNewPosition();
+        // console.log("loop")
+        // console.log(document.getElementById("line").style.left);
     }
 }
-function moveLine(callback) {
-    $('.line').animate({
+
+function moveLine() {
+    setNewPosition();
+    return $('#line').animate({
         'left': `${position}%`,
     }, {
-        duration: 2500,
-        easing: 'linear',
-        complete: callback
-    })
+        duration: 1,
+        complete: function () {
+            //resolve(setNewPosition(position, action))
+            //position+=25;
+            console.log(document.getElementById("line").style.left);
+        }
+    }).promise()
 }
-
+function setNewPosition() {
+    if (position == 100) {
+        action = "decrease";
+        position--;
+    } else if (position == 0) {
+        action = "increase";
+        position++;
+    } else if (action=="increase" && position < 100) {
+        position++;
+    } else if (action=="decrease" && position > 0) {
+        position--;
+    }
+}
+startAnimation();
 /**
  * Funcion asincrona que inicia la animación de la barra
  */
 async function startAnimation() {
     console.log("Starting animation");
-    await animateBar("increase", 0);
+    //await animateBar("increase", 0);
     await animateLine("increase", 0);
 }
 function animateLine(action, position) {
@@ -78,7 +111,6 @@ function animateLine(action, position) {
         line.animate({
     	    'left': `${position}%`,
         }, {
-    	    duration: 1,
             complete: function() {
                 if (position == 100) {
                     action = "decrease";
@@ -86,7 +118,7 @@ function animateLine(action, position) {
                     action = "increase";
                 }
                 if (stopAnimation == false) {
-                    //animateLine(action, position);
+                    animateLine(action, position);
                 } else {
                     console.log("Ending animation")
                 }
