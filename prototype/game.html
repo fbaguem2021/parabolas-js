@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo 1</title>
     <link rel="stylesheet" href="game/game.css">
+    <link rel="stylesheet" href="cannon/cannon.css">
 </head>
 <body> 
+    <div id="cannon">
+        <img src="svg/Cannon-custom-white.svg" alt="cannon.svg" id="cannon-body">
+        <!-- <img src="./img/wheel.svg" alt="wheel.svg" id="wheel"> -->
+        <div class="wheel" name="prueva-wheel">
+            <span></span>
+            <img id="wheel" src="svg/Wheel-white.svg" alt="wheel.svg">
+        </div>
+    </div>
+
+    
     <div class="float__buy-bar" id="bar">car:<span>0</span></div>
     <div class="btn" id="btn1">BUY</div>
+
+
 </body>
+<script src="utilities.js"></script>
+<script src="cannon/cannon.js"></script>
 <script src="game/game.js"></script>
 </html>

@@ -1,3 +1,10 @@
+:root {
+    --color-screen-bg: #292b37;
+    --color-txt: #fff;
+    --color-btn-bg: #52bc57;
+    --color-btn-border: #2f7932;
+    --color-bullet: #2c96dd;
+}
 body {
     background: #292b37;
     color: #fff;
@@ -17,8 +24,8 @@ body {
 }
   
 .btn {
-    background: #52bc57;
-    border-bottom: 2px #2f7932 solid;
+    background: var(--color-btn-bg);
+    border-bottom: 2px var(--color-btn-border) solid;
     width: 120px;
     line-height: 40px;
     display: block;
@@ -36,7 +43,7 @@ p {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #2c96dd;
+    background: var(--color-bullet);
     position: absolute;
     display: block;
     z-index: 2;

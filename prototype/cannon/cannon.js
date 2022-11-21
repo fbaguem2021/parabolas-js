@@ -1,7 +1,7 @@
 const cannon = {
     css : getComputedStyle(document.documentElement),
-    fullcannon: document.getElementById("full-cannon"),
-    cannon_svg: document.getElementById("cannon"),
+    fullcannon: document.getElementById("cannon"),
+    cannon_svg: document.getElementById("cannon-body"),
     wheel_svg: document.getElementById("wheel"),
     wheel_components: document.getElementsByClassName("wheel"),
     rotateCannon: function(deg) {
@@ -12,9 +12,10 @@ const cannon = {
         this.cannon_svg.height = fullSize;
         this.wheel_svg.width = (fullSize/2);
         this.wheel_svg.width = (fullSize/2);
-        this.rotateCannon(deg);
+        //this.rotateCannon(deg);
     }
 };
+//cannon.initCannon()
 //cannonData.initializeVectors();
 //initializeVectors()
 function initializeVectors() {
@@ -28,10 +29,10 @@ function rotateCannon(deg) {
 /** Funcion para obtenert un array associativo con los valores de las variables css
  * @returns Retorna un array, los valores de este varian dependiendo de las variables css que guardan
  */
-function cssVariables() {
+function cssVar() {
     return {
-        "scale"         : cannon.css.getPropertyValue("--scale"),
-        "--wheel-size"  : parseInt(cannon.css.getPropertyValue("--wheel-size").slice(0, -2)),
-        "--cannon-size" : parseInt(cannon.css.getPropertyValue("--cannon-size").slice(0, -2)),
+        "scale"             : cannon.css.getPropertyValue("--scale"),
+        "--wheel-size"      : parseInt(cannon.css.getPropertyValue("--wheel-size").slice(0, -2)),
+        "--cannon-size"     : parseInt(cannon.css.getPropertyValue("--cannon-size").slice(0, -2)),
     }
 }

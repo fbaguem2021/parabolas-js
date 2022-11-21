@@ -1,35 +1,72 @@
 :root {
+    /* COLORS */
+    --color-screen-bg-dark: #292b37;
+    --color-screen-bg-light: white;
+    --color-wheel-bg: #292b37;
+    --color-cannon-bg: #292b37;
+    /* --color-wheel-bg: white; */
+    /* SIZES */
     --scale: 2;
-    --wheel-size: 75px;
     --cannon-size: 150px;
-    --trans-x: -20px;
-    --trans-y: -15px;
+    --wheel-size: 75px;
+    --size-cannon: 150px;
+    --size-wheel: calc(var(--size-cannon)/2);
+    /* POSITIONS */
+    /*cañon (cannon-body + rueda)*/
+    --position-cannon-top: 20%;
+    --position-cannon-left: 15%;
+
+    /*rueda (svg + bg)*/
+    --position-wheel-full-top: calc(var(--size-cannon)- var(--size-wheel));
+    --position-wheel-full-left: calc(var(--size-cannon)/2- var(--size-wheel)/2);
+    /*svg*/
+    --position-wheel-body-top: 0;
+    --position-wheel-body-left: 0;
+    /*span*/
+    --position-wheel-bg-top: 0;
+}
+body {
+    background: var(--color-wheel-bg);
+    color: white;
+}
+#variablelist li::before {
+    color: white;
 }
 
-#full-cannon {
+#cannon {
     position: relative;
     display: block;
-    top: 10%;
-    left: 15%;
-    width: var(--cannon-size);
-    height: var(--cannon-size);
+    /* top: 10%;
+    left: 15%; */
+    top: var(--position-cannon-top);
+    left: var(--position-cannon-left);
+    width: var(--size-cannon);
+    height: var(--size-cannon);
+    cursor: pointer;
 }
 
 .wheel {
     position: absolute;
-    bottom: 0;
-    left: calc( var(--cannon-size)/2 - var(--wheel-size) / 2 );
+    /* bottom: 0; */
+    /* top: calc( var(--cannon-size) - var(--wheel-size) );
+    left: calc( var(--cannon-size)/2 - var(--wheel-size) / 2 ); */
+    top: calc( var(--size-cannon) - var(--size-wheel) );
+    left: calc( var(--size-cannon)/2 - var(--size-wheel) / 2 );
+}
+
+div.wheel img {
+    /* position: absolute; */
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 div.wheel span {
+    position: absolute;
+    top: 0;
     display: block;
     width: 75px;
     height: 75px;
-    background-color: white;
+    background-color: var(--color-wheel-bg);
     border-radius: 90px;
-}
-div.wheel img {
-    position: absolute;
-    top: 0;
-    left: 0;
 }

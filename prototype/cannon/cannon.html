@@ -1,12 +1,22 @@
 <body>
-    <div id="full-cannon">
-        <img src="../svg/cannon-custom.svg" alt="cannon.svg" id="cannon">
+    <div id="cannon">
+        <img src="../svg/Cannon-custom-white.svg" alt="cannon.svg" id="cannon-body">
         <!-- <img src="./img/wheel.svg" alt="wheel.svg" id="wheel"> -->
         <div class="wheel" name="prueva-wheel">
             <span></span>
-            <img id="wheel" src="../svg/wheel.svg" alt="wheel.svg">
+            <img id="wheel" src="../svg/Wheel-white.svg" alt="wheel.svg">
         </div>
     </div>
+    
+    <div name="lista variables">
+        <p>Variables:</p>
+        <ul id="variablelist">
+
+        </ul>
+    </div>
+
     <link rel="stylesheet" href="cannon.css">
     <script src="cannon.js"></script>
+    <script src="../utilities.js"></script>
+    <script>cannon.initCannon(150,-45)</script>
 </body>
