@@ -7,14 +7,17 @@
     <title>Ejemplo 1</title>
     <link rel="stylesheet" href="game/game.css">
     <link rel="stylesheet" href="cannon/cannon.css">
+    <link rel="stylesheet" href="powerbar/powerbar.css">
 </head>
 <body> 
+    <img id="fire" src="media/fire.gif" alt="this slowpoke moves"  width="100" />
     <div id="cannon">
-        <img src="svg/Cannon-custom-white.svg" alt="cannon.svg" id="cannon-body">
-        <!-- <img src="./img/wheel.svg" alt="wheel.svg" id="wheel"> -->
+        <img src="svg/Cannon-custom.svg" alt="cannon.svg" id="cannon-body">
+        <!-- <img src="svg/Cannon-custom-white.svg" alt="cannon.svg" id="cannon-body"> -->
         <div class="wheel" name="prueva-wheel">
             <span></span>
-            <img id="wheel" src="svg/Wheel-white.svg" alt="wheel.svg">
+            <!-- <img id="wheel" src="svg/Wheel_white.svg" alt="wheel.svg" width="75"> -->
+            <img id="wheel" src="svg/Wheel.svg" alt="wheel.svg" width="75">
         </div>
     </div>
 
@@ -25,6 +28,8 @@
 
 </body>
 <script src="utilities.js"></script>
+<script src="../js/jquery.min.js"></script>
 <script src="cannon/cannon.js"></script>
+<script src="powerbar/powerbar.js"></script>
 <script src="game/game.js"></script>
 </html>

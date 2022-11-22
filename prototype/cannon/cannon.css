@@ -3,6 +3,7 @@
     --color-screen-bg-dark: #292b37;
     --color-screen-bg-light: white;
     --color-wheel-bg: #292b37;
+    --color-wheel-bg-light: white;
     --color-cannon-bg: #292b37;
     /* --color-wheel-bg: white; */
     /* SIZES */
@@ -25,21 +26,16 @@
     /*span*/
     --position-wheel-bg-top: 0;
 }
-body {
-    background: var(--color-wheel-bg);
-    color: white;
-}
-#variablelist li::before {
-    color: white;
-}
-
 #cannon {
-    position: relative;
-    display: block;
+    /* position: relative; */
     /* top: 10%;
     left: 15%; */
-    top: var(--position-cannon-top);
-    left: var(--position-cannon-left);
+    /* top: var(--position-cannon-top);
+    left: var(--position-cannon-left); */
+    position: fixed;
+    left: 12%;
+    top: 10%;
+    display: block;
     width: var(--size-cannon);
     height: var(--size-cannon);
     cursor: pointer;
@@ -67,6 +63,6 @@ div.wheel span {
     display: block;
     width: 75px;
     height: 75px;
-    background-color: var(--color-wheel-bg);
+    background-color: var(--color-wheel-bg-light);
     border-radius: 90px;
 }

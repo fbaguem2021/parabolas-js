@@ -8,6 +8,17 @@
 body {
     background: #292b37;
     color: #fff;
+    background: url(../media/Sin\ título.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#fire {
+    text-align: center;
+    right: 30%;
+    bottom: 10%;
+    position: fixed;
 }
 .float__buy-bar {
     width: 100px;
